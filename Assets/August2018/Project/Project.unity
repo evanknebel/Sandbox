@@ -150,7 +150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b88fdf9bcb8ab344cadef50887c4ce88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 0.025
+  movementSpeed: 0.0255
   turnSpeed: 2
   canMove: 0
 --- !u!54 &157615609
@@ -597,6 +597,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animations: {fileID: 157615605}
   bigboy: 0
+  tempValueCenter: 0
+  maxValueCenter: 0.92
+  tempValueSize: 0
+  maxValueSize: 2.4
 --- !u!1 &442205029
 GameObject:
   m_ObjectHideFlags: 0
@@ -769,6 +773,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animations: {fileID: 157615605}
   bigboy: 0
+  tempValueCenter: 0
+  maxValueCenter: 0.92
+  tempValueSize: 0
+  maxValueSize: 2.4
 --- !u!1 &633351976
 GameObject:
   m_ObjectHideFlags: 0
@@ -1259,6 +1267,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animations: {fileID: 157615605}
   bigboy: 0
+  tempValueCenter: 0
+  maxValueCenter: 0.92
+  tempValueSize: 0
+  maxValueSize: 2.4
 --- !u!198 &1102131528 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 198411311030990520, guid: a742a8e1ffda1174788f1350a9f432ef,
@@ -1437,6 +1449,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animations: {fileID: 157615605}
   bigboy: 0
+  tempValueCenter: 0
+  maxValueCenter: 0.92
+  tempValueSize: 0
+  maxValueSize: 2.4
 --- !u!4 &1370723083 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400002, guid: 11134fe45de9c5e48a9d1cd89df82f01,
