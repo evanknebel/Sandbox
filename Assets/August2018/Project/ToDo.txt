@@ -1,1 +1,1 @@
-Make player controller. It's really not that hard, and it would be faster than messing around trying to get other peoples' to work.
+Wall colliders bigger when dancing, switches back to original size when not dancing

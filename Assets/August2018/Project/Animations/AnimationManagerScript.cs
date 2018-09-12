@@ -5,10 +5,15 @@ using UnityEngine;
 public class AnimationManagerScript : MonoBehaviour
 {
     Animator skeleton;
+    PlayerMovementScript movement;
 
-	// Use this for initialization
-	void Start ()
+    WallColliderExpander wallCollider;
+
+    // Use this for initialization
+    void Start ()
     {
+        wallCollider = FindObjectOfType<WallColliderExpander>();
+        movement = gameObject.GetComponent<PlayerMovementScript>();
         skeleton = gameObject.GetComponent<Animator>();
         skeleton.SetBool("isIdle", true);
 	}
@@ -22,6 +27,8 @@ public class AnimationManagerScript : MonoBehaviour
             skeleton.GetBool("isSitting") == false)
         {
             skeleton.SetBool("isIdle", true);
+            movement.canMove = true;
+            wallCollider.bigboy = false;
         }
         else
         {
@@ -46,6 +53,7 @@ public class AnimationManagerScript : MonoBehaviour
             if(skeleton.GetBool("isSitting") == false)
             {
                 skeleton.SetBool("isSitting", true);
+                movement.canMove = false;
             }
             //end sitting
             else
@@ -59,6 +67,8 @@ public class AnimationManagerScript : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.W))
         {
             skeleton.SetBool("isSwing", true);
+            movement.canMove = false;
+            wallCollider.bigboy = true;
         }
         //swing end
         if (Input.GetKeyUp(KeyCode.W))
@@ -69,6 +79,8 @@ public class AnimationManagerScript : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E))
         {
             skeleton.SetBool("isSamba", true);
+            movement.canMove = false;
+            wallCollider.bigboy = true;
         }
         //samba end
         if (Input.GetKeyUp(KeyCode.E))
@@ -79,6 +91,8 @@ public class AnimationManagerScript : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.R))
         {
             skeleton.SetBool("isTwerk", true);
+            movement.canMove = false;
+            wallCollider.bigboy = true;
         }
         //twerk end
         if (Input.GetKeyUp(KeyCode.R))

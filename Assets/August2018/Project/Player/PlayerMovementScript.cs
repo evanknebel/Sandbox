@@ -9,31 +9,37 @@ public class PlayerMovementScript : MonoBehaviour
     public float movementSpeed;
     public float turnSpeed;
 
+    public bool canMove;
+
     // Use this for initialization
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+
+        canMove = false;
     }
 
     private void Update()
     {
-        if (Input.GetKey(KeyCode.UpArrow))
+        if (canMove == true)
         {
-            gameObject.transform.position += (gameObject.transform.forward *= movementSpeed);
-        }
-        //if (Input.GetKey(KeyCode.DownArrow))
-        //{
-        //    gameObject.transform.position -= (gameObject.transform.forward *= movementSpeed);
-        //}
+            if (Input.GetKey(KeyCode.UpArrow))
+            {
+                gameObject.transform.position += (gameObject.transform.forward *= movementSpeed);
+            }
+            //if (Input.GetKey(KeyCode.DownArrow))
+            //{
+            //    gameObject.transform.position -= (gameObject.transform.forward *= movementSpeed);
+            //}
 
-        if (Input.GetKey(KeyCode.RightArrow))
-        {
-            transform.Rotate(0, turnSpeed, 0);
+            if (Input.GetKey(KeyCode.RightArrow))
+            {
+                transform.Rotate(0, turnSpeed, 0);
+            }
+            if (Input.GetKey(KeyCode.LeftArrow))
+            {
+                transform.Rotate(0, -turnSpeed, 0);
+            }
         }
-        if (Input.GetKey(KeyCode.LeftArrow))
-        {
-            transform.Rotate(0, -turnSpeed, 0);
-        }
-
     }
 }
