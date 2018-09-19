@@ -8,7 +8,7 @@ public class WallColliderExpander : MonoBehaviour
 
     BoxCollider animationBarrier;
 
-    public bool bigboy;
+    public bool bigboy; //Expansion of the colliders true/false
     public float tempValueCenter;
     public float maxValueCenter;
     public float tempValueSize;
@@ -24,6 +24,10 @@ public class WallColliderExpander : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
+
+
+        //the following logic is taken directly from AnimationManagerScript
+
         //idle
         if (!Input.anyKey
             &&
