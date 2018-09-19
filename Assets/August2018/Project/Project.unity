@@ -38,7 +38,8 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
+  m_IndirectSpecularColor: {r: 0.003998427, g: 0.00021809564, b: 0.00000005165827,
+    a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -970,7 +971,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sootiness: {fileID: 2100000, guid: d91a6623dd0b7204cbfe606c57adc5ee, type: 2}
   lerpFloat: 0
-  lerpFloatSpeed: 0.0001
+  lerpFloatSpeed: 0.0005
 --- !u!1 &839352500
 GameObject:
   m_ObjectHideFlags: 0
@@ -1860,7 +1861,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!108 &2005776843
 Light:
   m_ObjectHideFlags: 0
@@ -2053,6 +2054,15 @@ Prefab:
         type: 2}
       propertyPath: InitialModule.startColor.maxColor.a
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198441293187840094, guid: a742a8e1ffda1174788f1350a9f432ef,
+        type: 2}
+      propertyPath: CollisionModule.collisionMessages
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1560210373636638, guid: a742a8e1ffda1174788f1350a9f432ef, type: 2}
+      propertyPath: m_TagString
+      value: Smoke
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a742a8e1ffda1174788f1350a9f432ef, type: 2}

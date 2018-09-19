@@ -14,10 +14,13 @@ public class SootyCeiling : MonoBehaviour
     }
 
 
-    private void OnCollisionEnter(Collision other)
+    private void OnParticleCollision(GameObject smoke)
     {
-        lerpFloat += 0.1f;
+        if (smoke.gameObject.tag == "Smoke")
+        {
+            lerpFloat += lerpFloatSpeed;
     }
+}
 
 
 
